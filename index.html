@@ -533,7 +533,7 @@ function exBody(){
   if(q)list=list.filter(t=>(t.desc+' '+cat(t.cat).name+' '+payLabel(t.pay)).toLowerCase().includes(q));
   list.sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
   return `<div class="split" style="margin-top:16px"><div><span class="small muted sb">Entradas</span><div class="v teal">${brl(ent)}</div></div><div><span class="small muted sb">Saídas</span><div class="v coral">${brl(sai)}</div></div></div>
-    <div class="sec" style="margin-top:16px">${list.length?list.map(txRow).join(''):`<p class="empty">${q?'Nenhum lançamento encontrado para essa busca.':'Nenhum lançamento neste mês.<br>Toque no + para registrar o primeiro.'}</p>`}</div>`;
+    <div class="sec" style="margin-top:16px">${list.length?list.map(txRow).join(''):`<p class="empty">${q?'Nenhum lançamento encontrado para essa busca.':'Nenhum lançamento neste mês!.<br>Toque no + para registrar o primeiro.'}</p>`}</div>`;
 }
 function bindExtrato(v){
   const body=v.querySelector('#exBody'); const draw=()=>{body.innerHTML=exBody();body.querySelectorAll('[data-tx]').forEach(b=>b.onclick=()=>txSheet(TX.find(t=>t.id===b.dataset.tx)));};
@@ -835,3 +835,4 @@ render(false);
 </script>
 </body>
 </html>
+
