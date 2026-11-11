@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34706459/README.md)
+
 # Caz — protótipo navegável
 
 Protótipo do app de finanças pessoais **Caz** (“galho por galho”), com o mascote castor que reage às finanças do usuário.
